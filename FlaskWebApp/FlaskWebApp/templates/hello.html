@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Flights Info</title>
+
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+    </head>
+    <body>
+ 
+ 
+<div class="container">
+ 
+ 
+  <h2>Flask Web Form</h2>
+  <form  action="/prediction" method="post" role="form">
+    <div class="form-group">
+      <label for="Month">Month</label>
+      <select id="Month" name="Month" class="form-control">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+            </select> 
+      
+       <label for="Carrier">Carrier</label>
+
+                                    <select id="Carrier" name="Carrier" class="form-control">
+
+.                                   <option value="0">B6-JetBlue Airways</option>
+                                    <option value="1">FL-AirTran Airways Corporation</option>
+                                    <option value="2">AS-Alaska Airlines Inc</option>
+                                    <option value="3">AQ-Aloha Airlines Inc</option>
+                                    <option value="4">AA-American Airlines Inc</option>
+                                    <option value="5">MQ-American Eagle Airlines Inc</option>
+                                    <option value="6">EV-Atlantic Southeast Airlines</option>
+                                    <option value="7">OH-Comair Inc</option>
+                                    <option value="8">CO-Continental Air Lines Inc</option>
+                                    <option value="9">DL-Delta Air Lines Inc</option>
+                                    <option value="10">XE-Expressjet Airlines Inc</option>
+                                    <option value="11">F9-Frontier Airlines Inc</option>
+                                    <option value="12">HA-Hawaiian Airlines Inc</option>
+                                    <option value="13">U7-USA Jet Airlines Inc</option>
+                                    <option value="14">HA-Hawaiian Airlines Inc</option>
+      
+            </select> 
+      <label for="MC">Meteorological Conditions</label>
+      <select id="MC" name="MC" class="form-control">
+                      <option value="0">Visual</option>
+                      <option value="1">Instrument</option>
+      </select> 
+      <br>
+      <label for="TD">Total Delay</label>
+      <input type="Text" class="form-control" id="TD" name="TD">
+      <br>
+      <label for="OAGD">OAG based Gate Delay</label>
+      <input type="Text" class="form-control" id="OAGD" name="OAGD">
+      <br>
+      <label for="FLIGHTD">Flight based Gate Delay</label>
+      <input type="Text" class="form-control" id="FLIGHTD" name="FLIGHTD"> 
+        
+        
+        
+    </div>
+    <button type="submit" class="btn btn-success">Calculate</button>
+  </form>
+                 
+ {% if val > 0 %}
+      <h3> Flight is delaayed by </h3> <h3> {{val}}</h3><h3> minutes</h3>
+      {% endif %}
+
+</div>
+</body>
+</html>
