@@ -1,5 +1,7 @@
 # flightPrediction
 
+EDA using Tableau Dashboards: https://public.tableau.com/profile/pruthvij.thakar#!/
+
 DOCKER:
 
 ### To run images: 
